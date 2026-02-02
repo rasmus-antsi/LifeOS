@@ -32,7 +32,7 @@ def main() -> None:
         help="Enable verbose output",
     )
 
-    args = parser.parse_args()
+    args, unknown_args = parser.parse_known_args()
 
     context = Context(verbose=args.verbose)
     app = LifeOSApp(context)
@@ -41,7 +41,7 @@ def main() -> None:
     app.register("doctor", doctor_run)
     app.register("init", init_run)
 
-    app.run([args.command, *args.args])
+    app.run([args.command, *args.args, *unknown_args])
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.3
 
 filesystem:
   workspace:
@@ -50,3 +50,45 @@ filesystem:
         - resources
         - submissions
         - archive
+
+  desktop:
+    path: ~/Desktop
+
+  downloads:
+    path: ~/Downloads
+
+hygiene:
+  desktop:
+    allowlist:
+      names:
+        - .DS_Store
+      patterns:
+        - "^_Inbox$"
+
+  downloads:
+    age_days: 7
+    top_n: 5
+    allowlist:
+      names:
+        - .DS_Store
+      patterns: []
+    groups:
+      dmg:
+        - ".dmg"
+      pkg:
+        - ".pkg"
+      zip:
+        - ".zip"
+
+  caches:
+    warn_over_mb: 500
+    paths:
+      - ~/Library/Caches
+
+  large_files:
+    min_size_mb: 250
+    top_n: 10
+    roots:
+      - ~/Downloads
+      - ~/Desktop
+      - ~/System/temp
