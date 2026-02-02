@@ -1,0 +1,52 @@
+version: 0.2
+
+filesystem:
+  workspace:
+    path: ~/Workspace
+    required_folders:
+      - code
+      - saas
+      - clients
+      - hardware
+      - learning
+      - assets
+      - sandbox
+      - archive
+
+  system:
+    path: ~/System
+    required_folders:
+      - apps
+      - backups
+      - configs
+      - logs
+      - scripts
+      - secrets
+      - temp
+
+  documents:
+    path: ~/Documents
+    required_folders:
+      - school
+      - images
+      - videos
+      - audio
+      - files
+      - personal
+      - finance
+      - legal
+      - writing
+      - work
+      - archive
+    subfolders:
+      school:
+        - admin
+        - assignments
+        - classes
+        - files
+        - img
+        - notes
+        - projects
+        - resources
+        - submissions
+        - archive

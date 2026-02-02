@@ -1,0 +1,33 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Builds
+build/
+dist/
+
+# Editors
+.idea/
+.vscode/
+
+# Misc
+*.log
