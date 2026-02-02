@@ -26,6 +26,7 @@ class Context:
         self.expected_documents_subfolders = fs["documents"].get("subfolders", {})
 
         self.hygiene = self.spec.get("hygiene", {})
+        self.cleanup = self.spec.get("cleanup", {})
 
     def _load_spec(self, path: Path) -> dict:
         with open(path, "r", encoding="utf-8") as f:

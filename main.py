@@ -5,6 +5,7 @@ from life_os.context import Context
 
 from commands.doctor import run as doctor_run
 from commands.init import run as init_run
+from commands.cleanup import run as cleanup_run
 
 
 def main() -> None:
@@ -40,6 +41,7 @@ def main() -> None:
     # Register commands
     app.register("doctor", doctor_run)
     app.register("init", init_run)
+    app.register("cleanup", cleanup_run)
 
     app.run([args.command, *args.args, *unknown_args])
 

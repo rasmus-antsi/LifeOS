@@ -1,4 +1,4 @@
-version: 0.3
+version: 0.4
 
 filesystem:
   workspace:
@@ -88,6 +88,41 @@ hygiene:
   large_files:
     min_size_mb: 250
     top_n: 10
+    roots:
+      - ~/Downloads
+      - ~/Desktop
+      - ~/System/temp
+
+cleanup:
+  actions:
+    trash_dir: ~/.Trash
+
+  desktop:
+    allowlist:
+      names:
+        - .DS_Store
+      patterns:
+        - "^_Inbox$"
+
+  downloads:
+    allowlist:
+      names:
+        - .DS_Store
+      patterns: []
+    rules:
+      trash_extensions:
+        - ".dmg"
+        - ".pkg"
+        - ".zip"
+      max_age_days: 7
+      large_min_size_mb: 250
+
+  caches:
+    paths:
+      - ~/Library/Caches
+
+  large_files:
+    min_size_mb: 250
     roots:
       - ~/Downloads
       - ~/Desktop
